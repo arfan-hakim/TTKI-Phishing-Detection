@@ -1,0 +1,19 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Dataset
+data/*.csv
+
+# VS Code
+.vscode/
+
+# Trained models
+*.pkl
+*.joblib
