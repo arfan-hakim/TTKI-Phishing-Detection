@@ -115,3 +115,56 @@ Penelitian masih dalam tahap pengembangan.
 Hasil baseline diperoleh dari eksperimen menggunakan dataset PhiUSIIL dengan stratified random split.
 
 Eksperimen selanjutnya akan mengevaluasi pengaruh penggunaan fitur URL-only dan domain-aware validation.
+
+## Milestone 3 — Experimental Evaluation
+
+Pada tahap ini dilakukan evaluasi terhadap dua algoritma,
+yaitu Logistic Regression dan Random Forest, menggunakan
+empat skenario eksperimen.
+
+### Skenario Eksperimen
+
+| Skenario | Fitur | Strategi Validasi |
+|---|---|---|
+| A | Full Features | Random Split |
+| B | URL-Only | Random Split |
+| C | URL-Only | Domain-Grouped Split |
+| D | Full Features | Domain-Grouped Split |
+
+### Hasil Eksperimen
+
+Penelitian menunjukkan bahwa pembatasan fitur menjadi
+URL-only menurunkan rata-rata F1-score sebesar
+0,2848–0,3605 poin persentase.
+
+Sementara itu, perubahan random split menjadi
+domain-grouped split menghasilkan perbedaan rata-rata
+F1-score yang relatif kecil.
+
+### Robustness Validation
+
+Pengujian tambahan dilakukan menggunakan lima random seed:
+
+- 42
+- 21
+- 123
+- 2026
+- 7
+
+Total dilakukan 40 eksperimen.
+
+Hasil menunjukkan bahwa Random Forest menghasilkan
+rata-rata F1-score lebih tinggi dibandingkan
+Logistic Regression pada seluruh skenario.
+
+### Catatan Metodologis
+
+Domain-grouped split memastikan tidak ada domain yang sama
+antara data training dan testing.
+
+Hasil eksperimen belum membuktikan bahwa kedua strategi
+validasi setara secara statistik atau bahwa seluruh fitur
+bebas dari potensi data leakage.
+
+Seluruh hasil eksperimen tersedia pada folder `results`,
+sedangkan visualisasi tersedia pada folder `figures`.

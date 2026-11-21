@@ -1,0 +1,9 @@
+Scenario,Model,TN,FP,FN,TP,Total Errors
+A,Logistic Regression,40448,7,44,30112,51
+A,Random Forest,40451,4,8,30148,12
+B,Logistic Regression,40439,16,258,29898,274
+B,Random Forest,40435,20,159,29997,179
+C,Logistic Regression,40413,11,248,29549,259
+C,Random Forest,40385,39,139,29658,178
+D,Logistic Regression,40410,14,40,29757,54
+D,Random Forest,40423,1,9,29788,10

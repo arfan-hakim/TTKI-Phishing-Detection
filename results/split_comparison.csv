@@ -1,0 +1,3 @@
+Split Strategy,Training Samples,Testing Samples,Domain Overlap
+Random Split,164759,70611,2633
+Domain-Grouped Split,165149,70221,0
